@@ -46,9 +46,9 @@ const Navbar =() =>{
           <ul>
             <Button color="inherit"><Links><Link href="/"><a>Home</a></Link></Links></Button>
             <IconButton
-              edge="end"
+             
               aria-label="github"
-              aria-haspopup="true"
+              
               color="inherit"
               href="https://github.com/hlongwane1806"
               target="_blank"
