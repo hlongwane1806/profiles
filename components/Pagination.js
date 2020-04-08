@@ -16,8 +16,7 @@ const useStyles = makeStyles((theme) => ({
 const BasicPagination = ({seed, page})=>{
   const classes = useStyles();
   var count =3 + (page/3)*3; ;
-  
-  console.log("count = "+count);
+ 
   return (
     <div className={classes.root}>
      

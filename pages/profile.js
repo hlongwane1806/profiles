@@ -56,7 +56,7 @@ render(){
     <Layout>
         <React.Fragment>
             <CssBaseline  />
-          <Container fixed  style={{  marginTop: '2rem', width: '60vw'}} >
+          <Container fixed  style={{  marginTop: '6rem', width: '60vw'}} >
             
             <Typography component="div" style={{ display:'flex', justifyContent:'center', alignItems:'center', background: "url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/435311/photo__mountains.jpg') no-repeat center", height: '50vh'}}>
             <Image>

@@ -9,7 +9,7 @@ import {getProfiles} from '../api/api';
 class Profiles extends Component{
     
     static async getInitialProps({ query={page: 1, seed:''} }){
-       console.log(query);
+     
         const res = await getProfiles(query.page, query.seed);
         const data = await res.json();
         return {profiles:data.results, seed: data.info.seed, page: data.info.page}
