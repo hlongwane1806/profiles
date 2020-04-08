@@ -1,0 +1,31 @@
+const express = require('express');
+const next = require('next');
+const routes = require('./routes');
+
+ const dev = process.env.NODE_DEV !== 'production';
+
+ const app = next({dev});
+
+ const handle = app.getRequestHandler();
+ const handler = routes.getRequestHandler(app);
+
+ app.prepare()
+ .then(()=>{
+     const server = express();
+     server.use(handler)
+
+     
+     server.get('*',(req,res)=>{
+         return handle(req,res);
+     })
+     server.listen(3000, err =>{
+         if(err) throw err;
+         console.log("Server has started!")
+     })
+ })
+ .catch(err=>{
+     console.log(err.stack);
+     process.exit(1);
+
+ })
+
