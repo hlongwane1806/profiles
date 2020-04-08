@@ -45,18 +45,18 @@ const Navbar =() =>{
           </Typography>
           <ul>
             <Button color="inherit"><Links><Link href="/"><a>Home</a></Link></Links></Button>
-            <IconButton
-             
+            
+          </ul>
+          <IconButton
+              edge="end"
               aria-label="github"
-              
+              aria-haspopup="true"
               color="inherit"
-              href="https://github.com/hlongwane1806"
+              href="https://github.com/hlongwane1806/profiles"
               target="_blank"
             >
               <GitHubIcon/>
             </IconButton>
-          </ul>
-          
         </Toolbar>
       </AppBar>
     </div>
