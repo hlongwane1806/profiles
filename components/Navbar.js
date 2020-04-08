@@ -4,6 +4,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import IconButton from '@material-ui/core/IconButton';
 import {Link} from '../routes';
 import styled from 'styled-components';
 
@@ -45,7 +47,15 @@ const Navbar =() =>{
             <Button color="inherit"><Links><Link href="/"><a>Home</a></Link></Links></Button>
             
           </ul>
-          
+          <IconButton
+              edge="end"
+              aria-label="github"
+              color="inherit"
+              href="https://github.com/hlongwane1806/profiles"
+              target="_blank"
+            >
+              <GitHubIcon/>
+            </IconButton>
         </Toolbar>
       </AppBar>
     </div>
