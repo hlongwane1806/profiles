@@ -8,6 +8,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import IconButton from '@material-ui/core/IconButton';
 import {Link} from '../routes';
 import styled from 'styled-components';
+import MenuItem from '@material-ui/core/MenuItem';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,15 +48,17 @@ const Navbar =() =>{
             <Button color="inherit"><Links><Link href="/"><a>Home</a></Link></Links></Button>
             
           </ul>
-          <IconButton
-              edge="end"
-              aria-label="github"
-              color="inherit"
-              href="https://github.com/hlongwane1806/profiles"
-              target="_blank"
-            >
-              <GitHubIcon/>
-            </IconButton>
+          <MenuItem>
+            <IconButton
+              
+                aria-label="github"
+                color="inherit"
+                href="https://github.com/hlongwane1806/profiles"
+                target="_blank"
+              >
+                <GitHubIcon/>
+              </IconButton>
+            </MenuItem>
         </Toolbar>
       </AppBar>
     </div>

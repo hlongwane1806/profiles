@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Tabs from '../components/TabbedPanes';
 import Button from '@material-ui/core/Button';
-
+import ImagePagination from '../components/Pagination/ImagePagination';
 
 const Background = styled.div`
 background: #009FFF;
@@ -45,7 +45,7 @@ class Profile extends Component{
   const res = await getProfile(query.page, query.seed)
   const data = await res.json()
   const profile = data.results.filter((profile)=> profile.login.username === query.username)
-  return { profile: profile[0], seed: query.seed, page:query.page}
+  return { profiles: data.results, profile: profile[0], seed: query.seed, page:query.page}
 }
 
 
@@ -64,6 +64,8 @@ render(){
             </Image>
             </Typography>
             <Tabs profile={profile}/>
+
+            
             <BackButton>
             <Button variant="contained" color="primary" href="#contained-buttons">
             <Link route='index' params={{seed:seed, page:page}}>
@@ -71,7 +73,7 @@ render(){
               </Link>
             </Button>
             </BackButton>
-            
+            <ImagePagination seed={seed} page={page} profiles={this.props.profiles} currentProfile={profile} />
            
           </Container>
         </React.Fragment>

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Layout from '../layouts/Main';
-import Pagination from '../components/Pagination';
+import Pagination from '../components/Pagination/Pagination';
 import AllProfiles from '../components/Profile/AllProfiles';
 import {getProfiles} from '../api/api';
 
